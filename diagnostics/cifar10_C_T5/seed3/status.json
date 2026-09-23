@@ -1,0 +1,5 @@
+{
+  "status": "failed",
+  "error": "{'epoch': 1, 'batch': 64, 'global_step': 64, 'learning_rate': 0.1, 'stage': 'gradient', 'quantity': 'backbone.0.weight', 'loss': 8.0591906535702e+19, 'previous_loss': 8.00216734172583e+19}",
+  "failure_type": "numerical"
+}

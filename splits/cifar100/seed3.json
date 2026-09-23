@@ -1,0 +1,8 @@
+{
+  "seed": 3,
+  "dataset": "CIFAR-100",
+  "train_samples": 45000,
+  "validation_samples": 5000,
+  "train_indices_sha256": "ac4a3e19ce974ae37eb9c2661e9255110c60ac9ed9402fca56606b25ec0cc673",
+  "validation_indices_sha256": "de3aac0fc492f7a347e76a8909bd064829a93ec01249a946219a1a101c84c4f3"
+}

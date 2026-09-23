@@ -1,0 +1,24 @@
+{
+  "status": "historical_source_version_issue_resolved",
+  "current_matches_final_manifest": true,
+  "phase_2_through_4_model_hashes_match": true,
+  "phase_1_differences": [
+    {
+      "phase": 1,
+      "file": "src/models/uncertainty.py",
+      "recorded_sha256": "a5102ed9ceb2ee744b6619e87fac37761d536564cf0a30361e142d8a3f24a05d",
+      "current_sha256": "bcb37253eb6ab479a1212dc5a305e5e2cc21ae7db63cf961bcd1a91935314c4a",
+      "original_snapshot_available": true
+    },
+    {
+      "phase": 1,
+      "file": "src/models/uncertainty_cellular_classifier.py",
+      "recorded_sha256": "c268d81b979b8abce483610b2cb06cbd85d469eddbad5ab913ac368ac20c4a62",
+      "current_sha256": "99b790af490eb840733b30b51e8dd0c1de0604c8f80ff740a2ff36be0e11a60c",
+      "original_snapshot_available": true
+    }
+  ],
+  "interpretation": "User authorized inclusion of the exact historical snapshot. Both source versions are preserved and mapped explicitly; no byte-equivalence claim is made.",
+  "phase_1_snapshot_files_verified": 38,
+  "phase_1_snapshot_path": "historical/phase1"
+}

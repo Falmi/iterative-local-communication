@@ -1,0 +1,7 @@
+{
+  "model": "C",
+  "seed": 4,
+  "status": "failed",
+  "accuracy": null,
+  "reason": "deterministic numerical failure, epoch 1 batch/step 73"
+}

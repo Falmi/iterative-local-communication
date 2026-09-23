@@ -1,0 +1,16 @@
+{
+  "statuses": [
+    "nonfinite_detected",
+    "nonfinite_detected"
+  ],
+  "classification": "deterministic at recorded event resolution",
+  "matches": {
+    "epoch": true,
+    "batch": true,
+    "global_step": true,
+    "first_nonfinite": true,
+    "sample_indices": true
+  },
+  "same_environment": true,
+  "same_runner": true
+}

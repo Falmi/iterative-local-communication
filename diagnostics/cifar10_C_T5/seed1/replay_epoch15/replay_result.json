@@ -1,0 +1,4 @@
+{
+  "status": "nonfinite_reproduced",
+  "error": "forward:backbone.6.1.bn2: {'stage': 'validation', 'epoch': 15, 'batch': 352, 'global_step': 5280, 'learning_rate': 0.09879583809693739, 'validation_batch': 1, 'input': {'shape': [128, 3, 32, 32], 'dtype': 'torch.float32', 'finite': True, 'nan': 0, 'inf': 0, 'minimum': -1.9894737005233765, 'maximum': 2.12648868560791}, 'labels': {'min': 0, 'max': 9, 'dtype': 'torch.int64'}}"
+}

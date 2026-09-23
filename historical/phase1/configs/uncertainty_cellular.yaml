@@ -1,0 +1,29 @@
+experiment_name: uncertainty_cellular
+seed: 1
+deterministic: true
+device: auto
+data:
+  root: data
+  download: false
+  validation_size: 5000
+  workers: 0
+model:
+  name: uncertainty_cellular_resnet18
+  num_classes: 10
+  communication_iterations: 3
+  residual_scale: 1.0
+  neighbourhood_kernel_size: 3
+  share_communication_weights: true
+  communication_type: depthwise_local
+  uncertainty_type: predictive_entropy
+  normalize_uncertainty: true
+  detach_uncertainty_gate: true
+  gate_mode: entropy
+  fixed_gate_value: 1.0
+training:
+  epochs: 200
+  batch_size: 128
+  learning_rate: 0.1
+  momentum: 0.9
+  weight_decay: 0.0005
+output_root: outputs

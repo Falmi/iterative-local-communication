@@ -1,0 +1,15 @@
+name: iterative-local-communication
+channels:
+- defaults
+dependencies:
+- python=3.13.5
+- pip
+- pip:
+  - --extra-index-url https://download.pytorch.org/whl/cu130
+  - torch==2.9.1+cu130
+  - torchvision==0.24.1+cu130
+  - numpy==2.1.3
+  - PyYAML==6.0.2
+  - scipy==1.15.3
+  - matplotlib==3.10.0
+  - pytest==8.3.4

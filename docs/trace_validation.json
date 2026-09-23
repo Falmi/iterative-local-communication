@@ -1,0 +1,6 @@
+{
+  "configs_checked": 77,
+  "summary_rows_checked": 110,
+  "status": "passed",
+  "scope": "All indexed configs; numeric fields of archived per-seed summary rows with indexed run IDs. No checkpoint content validation or equivalence claim."
+}

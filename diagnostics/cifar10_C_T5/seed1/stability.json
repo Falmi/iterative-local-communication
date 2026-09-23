@@ -1,0 +1,27 @@
+{
+  "steps": 4928,
+  "previous_loss": 0.44065025448799133,
+  "completed_successfully": false,
+  "failure": {
+    "epoch": 15,
+    "phase": "validation",
+    "evaluation_batch": 1,
+    "last_completed_training_batch": 352,
+    "global_step": 5280,
+    "learning_rate": 0.09879583809693739,
+    "stage": "validation_forward",
+    "quantity": "backbone.6.1.bn2",
+    "loss": null,
+    "previous_loss": null,
+    "evidence_origin": "Isolated replay of uncommitted epoch 15 from original epoch-14 checkpoint",
+    "evidence_files": {
+      "work/final_validation_diagnostics/replay_epoch15/event.json": "32cdb26ad076bce16babc9c95ec6e7bc39b9a22b0aa320d02a27469d83dd8f76",
+      "work/final_validation_diagnostics/replay_epoch15/model_at_event.pt": "7b4efc1d1f5d663da3a71030e8b411bf4609818786a07d6e4737037c8a4bee85",
+      "work/final_validation_diagnostics/replay_epoch15/last.pt": "2a1f9330e37682a9a42d8d1a4a167f9995387fcc397d4ba40338e3b0d51f3f14",
+      "work/final_validation_diagnostics/replay_epoch15/replay_result.json": "f44b5968fa9809aab8bcaef6a59540e19e45ac3e27f22c60e044cbe0cf3ce4db"
+    },
+    "inf_count": 7418,
+    "nan_count": 0
+  },
+  "steps_note": "steps retains the original committed epoch-14 counter; failure.global_step is the replay-observed epoch-15 coordinate."
+}

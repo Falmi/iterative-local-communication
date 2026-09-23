@@ -1,0 +1,110 @@
+{
+  "status": "local_commit_prepared_publication_blocked",
+  "candidate_file_count": 302,
+  "candidate_bytes": 7367246,
+  "largest_20": [
+    {
+      "path": "results/cifar10_main/phase3_summary.json",
+      "bytes": 1282190
+    },
+    {
+      "path": "results/iteration_ablation/summary.json",
+      "bytes": 989544
+    },
+    {
+      "path": "results/cifar10_main/phase2_summary.json",
+      "bytes": 981283
+    },
+    {
+      "path": "results/communication_strength/phase4_summary.json",
+      "bytes": 508019
+    },
+    {
+      "path": "results/cifar10c/summary.json",
+      "bytes": 381882
+    },
+    {
+      "path": "results/cifar10_main/references.json",
+      "bytes": 354132
+    },
+    {
+      "path": "results/cifar100/summary.json",
+      "bytes": 301788
+    },
+    {
+      "path": "results/one_shot/summary.json",
+      "bytes": 287631
+    },
+    {
+      "path": "results/cifar10_main/phase1_summary.json",
+      "bytes": 270473
+    },
+    {
+      "path": "results/cifar10c/cells.csv",
+      "bytes": 207660
+    },
+    {
+      "path": "figures/R2_corruption_differences.png",
+      "bytes": 130405
+    },
+    {
+      "path": "results/cifar10c/per_corruption.csv",
+      "bytes": 106598
+    },
+    {
+      "path": "figures/communication_dynamics.png",
+      "bytes": 82766
+    },
+    {
+      "path": "figures/R1_severity.png",
+      "bytes": 79435
+    },
+    {
+      "path": "figures/architecture_ladder.png",
+      "bytes": 61276
+    },
+    {
+      "path": "figures/D1_minus_A_severity.png",
+      "bytes": 59352
+    },
+    {
+      "path": "figures/R3_entropy.png",
+      "bytes": 56804
+    },
+    {
+      "path": "docs/source_provenance.json",
+      "bytes": 56750
+    },
+    {
+      "path": "figures/A2_latency.png",
+      "bytes": 55971
+    },
+    {
+      "path": "figures/clean_accuracy_stability.png",
+      "bytes": 54689
+    }
+  ],
+  "original_tests": "91 passed",
+  "release_tests": "59 passed in standalone temporary copy",
+  "cli_help_checks": 8,
+  "dry_run_matrices": 4,
+  "all_source_imports": "passed",
+  "configs_and_results_parse": "passed",
+  "regenerated_table_fragments": "byte-identical",
+  "security": "no flagged patterns",
+  "git_commit": null,
+  "release_tag": null,
+  "github_url": "https://github.com/Falmi/iterative-local-communication",
+  "github_status": "not created",
+  "old_repository_status": "not removed",
+  "license": "MIT; authorized by instruction to continue",
+  "blockers": [
+    "GitHub CLI not installed; authentication cannot be checked"
+  ],
+  "remaining_validation": [
+    "Independent Git clone verification"
+  ],
+  "historical_snapshot": "38 exact Phase 1 files included and SHA-256 verified",
+  "synthetic_smoke": "CIFAR-100 A single synthetic epoch completed successfully in standalone temporary copy",
+  "trace_validation": "77 exact configs and 110 per-seed numeric summaries verified"
+}

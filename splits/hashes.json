@@ -1,0 +1,66 @@
+[
+  {
+    "seed": 1,
+    "dataset": "CIFAR-10",
+    "train_samples": 45000,
+    "validation_samples": 5000,
+    "train_indices_sha256": "227703b0e53965e913df7610674501704f4763b5ab2c9d104ee47820644ab481",
+    "validation_indices_sha256": "e44685f8e3092aec3a62e42b79fa42628f2845ab027665f9f9c7183b73b786a7"
+  },
+  {
+    "seed": 2,
+    "dataset": "CIFAR-10",
+    "train_samples": 45000,
+    "validation_samples": 5000,
+    "train_indices_sha256": "b06d91be069fcdea548cc6bc18296d9016b1c0bc4e921b92428e1f9795305f04",
+    "validation_indices_sha256": "a4e9cf08a52f86a93119ead3968749abddf0b963123c14bcb38a6d26705e540c"
+  },
+  {
+    "seed": 3,
+    "dataset": "CIFAR-10",
+    "train_samples": 45000,
+    "validation_samples": 5000,
+    "train_indices_sha256": "ac4a3e19ce974ae37eb9c2661e9255110c60ac9ed9402fca56606b25ec0cc673",
+    "validation_indices_sha256": "de3aac0fc492f7a347e76a8909bd064829a93ec01249a946219a1a101c84c4f3"
+  },
+  {
+    "seed": 4,
+    "dataset": "CIFAR-10",
+    "train_samples": 45000,
+    "validation_samples": 5000,
+    "train_indices_sha256": "a0a14b0d81b6bbe11cc75daf09417c598f65657d72c6a35b6481deac2998fae1",
+    "validation_indices_sha256": "294efa1bdc1324af94a96c1b5fb920e183d40ca3660d5783cc72ec1a8d6aca42"
+  },
+  {
+    "seed": 5,
+    "dataset": "CIFAR-10",
+    "train_samples": 45000,
+    "validation_samples": 5000,
+    "train_indices_sha256": "ffc96dc3774e47207f170ee8f6af06102c878f7c7b06ae87764cd165547a5fb3",
+    "validation_indices_sha256": "b6e35a891ea1edff42f5fcbde3358a820f62e2d7bbb50df0f3bafbae549a6e9e"
+  },
+  {
+    "seed": 1,
+    "dataset": "CIFAR-100",
+    "train_samples": 45000,
+    "validation_samples": 5000,
+    "train_indices_sha256": "227703b0e53965e913df7610674501704f4763b5ab2c9d104ee47820644ab481",
+    "validation_indices_sha256": "e44685f8e3092aec3a62e42b79fa42628f2845ab027665f9f9c7183b73b786a7"
+  },
+  {
+    "seed": 2,
+    "dataset": "CIFAR-100",
+    "train_samples": 45000,
+    "validation_samples": 5000,
+    "train_indices_sha256": "b06d91be069fcdea548cc6bc18296d9016b1c0bc4e921b92428e1f9795305f04",
+    "validation_indices_sha256": "a4e9cf08a52f86a93119ead3968749abddf0b963123c14bcb38a6d26705e540c"
+  },
+  {
+    "seed": 3,
+    "dataset": "CIFAR-100",
+    "train_samples": 45000,
+    "validation_samples": 5000,
+    "train_indices_sha256": "ac4a3e19ce974ae37eb9c2661e9255110c60ac9ed9402fca56606b25ec0cc673",
+    "validation_indices_sha256": "de3aac0fc492f7a347e76a8909bd064829a93ec01249a946219a1a101c84c4f3"
+  }
+]

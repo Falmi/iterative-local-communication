@@ -1,0 +1,105 @@
+{
+  "uploaded": false,
+  "checkpoints": [
+    {
+      "model": "A",
+      "seed": 1,
+      "source": "outputs/experiment_phase1/cifar10-A-baseline-seed1/best.pt",
+      "bytes": 89530502,
+      "sha256": "8e132c36c41ed8e2900a8bf6d44de6140525130e286600c29068760fc4ec6309"
+    },
+    {
+      "model": "A",
+      "seed": 2,
+      "source": "outputs/experiment_phase1/cifar10-A-baseline-seed2/best.pt",
+      "bytes": 89530950,
+      "sha256": "9576cd80760de63633c7c88decf532576f1ef0052721cecfe737ad6daeaf38f8"
+    },
+    {
+      "model": "A",
+      "seed": 3,
+      "source": "outputs/experiment_phase1/cifar10-A-baseline-seed3/best.pt",
+      "bytes": 89527878,
+      "sha256": "b4f73657a7e583c40a76f0cf546d3ce41b409437ec8ec0b69b911301c686b563"
+    },
+    {
+      "model": "C",
+      "seed": 1,
+      "source": "outputs/experiment_phase1/cifar10-C-cellular-t3-seed1/best.pt",
+      "bytes": 91685770,
+      "sha256": "844b402ce21c69f815332e0987a8eddafbf9c6bd37d860db99ac4e5d840cffcd"
+    },
+    {
+      "model": "C",
+      "seed": 2,
+      "source": "outputs/experiment_phase1/cifar10-C-cellular-t3-seed2/best.pt",
+      "bytes": 91684426,
+      "sha256": "c58f4469efb8a8b06efc975b867b5440e7a5bfbd25f753aaa2628f19cd80997e"
+    },
+    {
+      "model": "C",
+      "seed": 3,
+      "source": "outputs/experiment_phase1/cifar10-C-cellular-t3-seed3/best.pt",
+      "bytes": 91684746,
+      "sha256": "f06ddd950bd9a98246b372ffec6901e97a93a795225179b01208df0fb7be2105"
+    },
+    {
+      "model": "D1",
+      "seed": 1,
+      "source": "outputs/experiment_phase2/cifar10-D1-linear-t3-seed1/best.pt",
+      "bytes": 91685706,
+      "sha256": "827cfac1f08aa974bea49e567225fdf8885fb02337c0d2d9f953e991fd45cc5a"
+    },
+    {
+      "model": "D1",
+      "seed": 2,
+      "source": "outputs/experiment_phase2/cifar10-D1-linear-t3-seed2/best.pt",
+      "bytes": 91684234,
+      "sha256": "ad0d1d091431930ba23c833cf472c81cdc924c0e49c032828d9c789c28fd01eb"
+    },
+    {
+      "model": "D1",
+      "seed": 3,
+      "source": "outputs/experiment_phase2/cifar10-D1-linear-t3-seed3/best.pt",
+      "bytes": 91685706,
+      "sha256": "556807a3cf8e5df24b53de16971ee9aaaa7bb3b6a2f943e9e62f9de3259c0b79"
+    },
+    {
+      "model": "A",
+      "seed": 4,
+      "source": "outputs/experiment_phase3/cifar10-A-baseline-seed4/best.pt",
+      "bytes": 89527686,
+      "sha256": "92ac055eab9563cb596991f8744bbcb43bed5abb7296b1d33c51e7e57680af88"
+    },
+    {
+      "model": "A",
+      "seed": 5,
+      "source": "outputs/experiment_phase3/cifar10-A-baseline-seed5/best.pt",
+      "bytes": 89528198,
+      "sha256": "b6ea887fce8da1de1b12641f6959feb60e2879829730c81873ac6c379a172fba"
+    },
+    {
+      "model": "C",
+      "seed": 5,
+      "source": "outputs/experiment_phase3/cifar10-C-cellular-t3-seed5/best.pt",
+      "bytes": 91683658,
+      "sha256": "8acc828619cd983716ed3fbcfbf91326ab2ac6528eab58377b1093685131dc1a"
+    },
+    {
+      "model": "D1",
+      "seed": 4,
+      "source": "outputs/experiment_phase3/cifar10-D1-linear-t3-seed4/best.pt",
+      "bytes": 91684874,
+      "sha256": "01310d0b15676d384361b306c2d446bc3fdb651b4203d6c57be301f1b60cc5a0"
+    },
+    {
+      "model": "D1",
+      "seed": 5,
+      "source": "outputs/experiment_phase3/cifar10-D1-linear-t3-seed5/best.pt",
+      "bytes": 91685706,
+      "sha256": "16505867201dbaf64b18f5a399eea34eb4f8dd208ffde506c030c231ef85422e"
+    }
+  ],
+  "total_bytes": 1272810040,
+  "missing": "C seed 4 has no successful final checkpoint because training failed. No replacement exists."
+}

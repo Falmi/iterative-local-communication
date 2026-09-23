@@ -1,0 +1,7 @@
+{
+  "status": "failed",
+  "failure_type": "numerical_validation",
+  "error": "Non-finite validation output at backbone.6.1.bn2",
+  "evidence": "work/final_validation_diagnostics/replay_epoch15/event.json",
+  "amendment": "outputs/final_experiments/source_amendments/validation_guard_20260921"
+}

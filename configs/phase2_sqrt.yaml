@@ -1,0 +1,31 @@
+data:
+  download: false
+  root: data
+  validation_size: 5000
+  workers: 0
+deterministic: true
+device: auto
+experiment_name: phase2-D2-sqrt
+model:
+  communication_iterations: 3
+  communication_type: depthwise_local
+  detach_uncertainty_gate: true
+  fixed_gate_value: 1.0
+  gate_mode: entropy
+  name: uncertainty_cellular_resnet18
+  neighbourhood_kernel_size: 3
+  normalize_uncertainty: true
+  num_classes: 10
+  residual_scale: 1.0
+  share_communication_weights: true
+  uncertainty_type: predictive_entropy
+  gate_mapping: sqrt
+  minimum_gate: 0.1
+output_root: outputs
+seed: 1
+training:
+  batch_size: 128
+  epochs: 200
+  learning_rate: 0.1
+  momentum: 0.9
+  weight_decay: 0.0005

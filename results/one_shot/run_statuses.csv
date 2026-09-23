@@ -1,0 +1,4 @@
+id,model,seed,T,dataset,status
+cifar-10-C-T1-seed1,C,1,1,CIFAR-10,completed
+cifar-10-C-T1-seed2,C,2,1,CIFAR-10,completed
+cifar-10-C-T1-seed3,C,3,1,CIFAR-10,completed

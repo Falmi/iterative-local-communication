@@ -1,0 +1,132 @@
+# Efficiency accounting
+
+PyTorch 2.9.1+cu130 Conv2d/Linear forward hooks count all repeated invocations at 1×3×32×32. One multiply-add = one MAC = two arithmetic FLOPs. No external counter installed.
+
+Counts exclude normalization, activation, pooling, residual/gate arithmetic, softmax/log/entropy, bias additions and reductions. **Total model FLOPs remain unavailable; partial arithmetic FLOPs are explicitly labeled.** D1 includes every classifier invocation, but functional gating is excluded.
+
+Latency is the frozen synchronized GPU validation forward timing, batch 128, historical successful seeds (C conditional); C T1 remains pending until trained. Monitoring/training overhead is not inference latency. Per-seed latency dispersion is in JSON.
+
+```json
+[
+  {
+    "model": "A-T0",
+    "parameters": 11173962,
+    "conv_linear_MACs": 555422720,
+    "conv_linear_arithmetic_FLOPs": 1110845440,
+    "total_model_FLOPs": null,
+    "latency_ms": 0.05925024253316224,
+    "latency_seed_n": 5,
+    "latency_statistics": {
+      "n": 5,
+      "mean": 0.05925024253316224,
+      "std": 6.685235530427107e-05,
+      "ci95": [
+        0.0591672343703858,
+        0.05933325069593868
+      ],
+      "median": 0.05924601220758632,
+      "minimum": 0.0591652208706364,
+      "maximum": 0.05932717118412256
+    },
+    "relative_latency_vs_A": 1.0,
+    "parameter_increase_vs_A": 0.0,
+    "conv_linear_compute_increase_vs_A": 0.0
+  },
+  {
+    "model": "B-T3",
+    "parameters": 11700298,
+    "conv_linear_MACs": 580588544,
+    "conv_linear_arithmetic_FLOPs": 1161177088,
+    "total_model_FLOPs": null,
+    "latency_ms": 0.06426269080257044,
+    "latency_seed_n": 3,
+    "latency_statistics": {
+      "n": 3,
+      "mean": 0.06426269080257044,
+      "std": 1.1282410076286031e-05,
+      "ci95": [
+        0.06423466374222085,
+        0.06429071786292002
+      ],
+      "median": 0.06426693800021895,
+      "minimum": 0.06424990119412541,
+      "maximum": 0.06427123321336695
+    },
+    "relative_latency_vs_A": 1.084597936735917,
+    "parameter_increase_vs_A": 0.0471037936230676,
+    "conv_linear_compute_increase_vs_A": 0.04530931683889339
+  },
+  {
+    "model": "C-T1",
+    "parameters": 11442762,
+    "conv_linear_MACs": 559690752,
+    "conv_linear_arithmetic_FLOPs": 1119381504,
+    "total_model_FLOPs": null,
+    "latency_ms": 0.061131647787988186,
+    "latency_seed_n": 3,
+    "latency_statistics": {
+      "n": 3,
+      "mean": 0.061131647787988186,
+      "std": 1.5295148233018686e-05,
+      "ci95": [
+        0.0610936525334562,
+        0.06116964304252017
+      ],
+      "median": 0.061130921391304584,
+      "minimum": 0.0611167287803255,
+      "maximum": 0.06114729319233447
+    },
+    "relative_latency_vs_A": 1.031753545207396,
+    "parameter_increase_vs_A": 0.024055925731625072,
+    "conv_linear_compute_increase_vs_A": 0.007684294945658587
+  },
+  {
+    "model": "C-T3",
+    "parameters": 11442762,
+    "conv_linear_MACs": 568226816,
+    "conv_linear_arithmetic_FLOPs": 1136453632,
+    "total_model_FLOPs": null,
+    "latency_ms": 0.06368307956727222,
+    "latency_seed_n": 4,
+    "latency_statistics": {
+      "n": 4,
+      "mean": 0.06368307956727222,
+      "std": 9.001946150097048e-05,
+      "ci95": [
+        0.0635398385159435,
+        0.06382632061860094
+      ],
+      "median": 0.06371208489872515,
+      "minimum": 0.06355194265488535,
+      "maximum": 0.0637562058167532
+    },
+    "relative_latency_vs_A": 1.074815508672879,
+    "parameter_increase_vs_A": 0.024055925731625072,
+    "conv_linear_compute_increase_vs_A": 0.023052884836975984
+  },
+  {
+    "model": "D1-T3",
+    "parameters": 11442762,
+    "conv_linear_MACs": 568242176,
+    "conv_linear_arithmetic_FLOPs": 1136484352,
+    "total_model_FLOPs": null,
+    "latency_ms": 0.06529876701533795,
+    "latency_seed_n": 5,
+    "latency_statistics": {
+      "n": 5,
+      "mean": 0.06529876701533795,
+      "std": 0.0002445307920237582,
+      "ci95": [
+        0.06499514193442979,
+        0.0656023920962461
+      ],
+      "median": 0.0652558309957385,
+      "minimum": 0.06510505524929613,
+      "maximum": 0.0657140769995749
+    },
+    "relative_latency_vs_A": 1.1020843835160736,
+    "parameter_increase_vs_A": 0.024055925731625072,
+    "conv_linear_compute_increase_vs_A": 0.02308053944930455
+  }
+]
+```

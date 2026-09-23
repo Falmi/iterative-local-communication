@@ -1,0 +1,15 @@
+{
+  "steps": 5360,
+  "previous_loss": 4.6414728879354675e+17,
+  "completed_successfully": false,
+  "failure": {
+    "epoch": 16,
+    "batch": 81,
+    "global_step": 5361,
+    "learning_rate": 0.09861849601988384,
+    "stage": "gradient",
+    "quantity": "backbone.0.weight",
+    "loss": 2.295201746701517e+16,
+    "previous_loss": 4.6414728879354675e+17
+  }
+}

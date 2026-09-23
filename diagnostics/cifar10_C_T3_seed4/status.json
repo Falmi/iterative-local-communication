@@ -1,0 +1,4 @@
+{
+  "status": "failed",
+  "error": "RuntimeError('Non-finite training loss')"
+}
