@@ -1,21 +1,19 @@
-# Local release preparation report
+# Reproducibility release report
 
-Local Git preparation is complete; public push, release tag and old-repository removal remain pending GitHub CLI authentication.
+The curated package is public at https://github.com/Falmi/iterative-local-communication.
 
-Current scientific source matches the frozen final manifest. Two gate-related source files differ from Phase 1; their changes add Phase 2 gate mappings. Original snapshots are available. The user-authorized exact 38-file Phase 1 snapshot is now included and verified; the historical-version stop condition is resolved through explicit source mapping.
+The initial code commit is `c63faea8e4611b6f58f5f06b6a736ba9bf12effa`. The paper release tag is `v1.0-paper`; publication metadata may be committed after the initial code snapshot.
 
-Original tests: 91 passed. Release tests: 58 passed. Eight CLI help checks, four matrix dry runs, all source imports and config/result parsing passed. All seven manuscript table fragments regenerate byte-for-byte. No long training was run.
+There are 302 tracked files, approximately 7.4 MB of curated content. The scientific source and configs are preserved. The exact 38-file Phase 1 snapshot is included with verified hashes and an explicit phase/version mapping.
 
-Security pattern checks found no flagged candidate content. Datasets and checkpoints are excluded. Exact commands are in README.md. Largest files and package inventory are in docs/release_status.json.
+Validation: 91 original tests passed; 59 release tests passed from an independent Git clone; synthetic CIFAR-100 A training completed; eight CLI help checks and four matrix dry runs passed; all source imports/config/result parsing passed; seven manuscript table fragments regenerate byte-for-byte; 77 config and 110 per-seed summary trace checks passed. No full experiments were rerun.
 
-MIT was approved by the author’s instruction to continue. No existing license/institutional mandate was found in the inspected project; institutional ownership is not independently established.
+MIT code license is authorized. Datasets, checkpoints and credentials are excluded. Security checks found no flagged candidate content. Exact reproduction commands and the citation are in README.md.
 
-GitHub CLI is absent. After installing the official GitHub CLI, run `gh auth login`, then `gh auth status`. Do not place credentials in files. Neither the replacement repository nor v1.0-paper exists yet. The previous public repository remains unchanged.
+The recommended 14-checkpoint archive totals 1,272,810,040 bytes and has not been uploaded. Check archive-host limits and dataset/institutional terms separately before depositing large artifacts. No successful C seed4 checkpoint exists. Exact captured failure-state replay requires separately archived model states. Hardware/driver variation and unrecorded historical TF32 flags limit bitwise guarantees.
 
-Remaining steps: finish independent-clone validation, then publish after CLI authentication.
-
-Proposed Code Availability statement, for use only after successful publication:
+Code Availability:
 
 “Source code, experiment configurations, seed-specific split metadata, numerical-failure diagnostics, aggregation scripts, and manuscript-level results are publicly available at: https://github.com/Falmi/iterative-local-communication.”
 
-CITATION.cff and README include a citation without invented publication metadata.
+The manuscript is not represented as accepted or published. See CITATION.cff for repository metadata and docs/result_interpretation.md for scientific limitations.

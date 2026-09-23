@@ -1,5 +1,5 @@
 {
-  "status": "local_commit_prepared_publication_blocked",
+  "status": "published",
   "candidate_file_count": 302,
   "candidate_bytes": 7367246,
   "largest_20": [
@@ -92,19 +92,17 @@
   "configs_and_results_parse": "passed",
   "regenerated_table_fragments": "byte-identical",
   "security": "no flagged patterns",
-  "git_commit": null,
-  "release_tag": null,
+  "git_commit": "c63faea8e4611b6f58f5f06b6a736ba9bf12effa",
+  "release_tag": "v1.0-paper (created after publication metadata commit)",
   "github_url": "https://github.com/Falmi/iterative-local-communication",
-  "github_status": "not created",
+  "github_status": "public repository created and initial code pushed",
   "old_repository_status": "not removed",
   "license": "MIT; authorized by instruction to continue",
-  "blockers": [
-    "GitHub CLI not installed; authentication cannot be checked"
-  ],
-  "remaining_validation": [
-    "Independent Git clone verification"
-  ],
+  "blockers": [],
+  "remaining_validation": [],
   "historical_snapshot": "38 exact Phase 1 files included and SHA-256 verified",
   "synthetic_smoke": "CIFAR-100 A single synthetic epoch completed successfully in standalone temporary copy",
-  "trace_validation": "77 exact configs and 110 per-seed numeric summaries verified"
+  "trace_validation": "77 exact configs and 110 per-seed numeric summaries verified",
+  "git_commit_note": "Scientific code commit verified by independent local Git clone; subsequent publication metadata commits do not change code.",
+  "independent_clone": "59 tests passed; dataset loader source present"
 }
