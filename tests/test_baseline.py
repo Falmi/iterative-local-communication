@@ -27,7 +27,7 @@ def test_metrics():
 
 
 def test_seeded_smoke_loader():
-    config = load_config("configs/baseline.yaml")
+    config = load_config("configs/cifar10/cifar10-A-baseline-seed1.yaml")
     a = next(iter(make_loader(config, "train", True)))
     b = next(iter(make_loader(config, "train", True)))
     assert torch.equal(a[0], b[0]) and torch.equal(a[1], b[1])
@@ -48,7 +48,7 @@ def test_cifar_split_and_transforms(monkeypatch):
             return 50000 if self.train else 10000
 
     monkeypatch.setattr(cifar.datasets, "CIFAR10", MockCIFAR)
-    config = load_config("configs/baseline.yaml")
+    config = load_config("configs/cifar10/cifar10-A-baseline-seed1.yaml")
     train = make_loader(config, "train").dataset
     validation = make_loader(config, "validation").dataset
     test = make_loader(config, "test").dataset

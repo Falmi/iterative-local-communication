@@ -105,7 +105,7 @@ def test_entropy_and_endpoint_categories():
 
 @pytest.mark.parametrize('iterations', [0, 3])
 def test_analysis_consistency(iterations):
-    config = load_config('configs/refinement.yaml')
+    config = load_config('configs/cifar10/cifar10-B-refinement-t3-seed1.yaml')
     config['training']['batch_size'] = 3  # uneven last batch: test weighted means
     model = IterativeClassifier(refinement_iterations=iterations)
     result = analyze_refinement(model, make_loader(config, 'test', True), torch.device('cpu'), True, True)
@@ -124,10 +124,10 @@ def test_analysis_consistency(iterations):
 
 
 def test_factory_preserves_baseline_and_config():
-    baseline = create_model(load_config('configs/baseline.yaml')['model'])
+    baseline = create_model(load_config('configs/cifar10/cifar10-A-baseline-seed1.yaml')['model'])
     assert count(baseline) == 11173962
     assert 'conv1.weight' in baseline.state_dict()
-    assert isinstance(create_model(load_config('configs/refinement.yaml')['model']), IterativeClassifier)
+    assert isinstance(create_model(load_config('configs/cifar10/cifar10-B-refinement-t3-seed1.yaml')['model']), IterativeClassifier)
 
 
 @pytest.mark.parametrize('iterations', [-1, 1.5, True])

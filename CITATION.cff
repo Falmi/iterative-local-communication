@@ -1,10 +1,10 @@
 cff-version: 1.2.0
 message: "Please cite the manuscript and this code when using these materials."
-title: "Controlling Iterative Local Communication for Visual Recognition: Stability, Uncertainty, and Robustness"
+title: "Stability and Uncertainty in Iterative Local Communication for Visual Recognition: A Controlled Study"
 authors:
   - family-names: Tesema
     given-names: Fiseha Berhanu
     affiliation: University of Nottingham Ningbo China
-version: 1.0.0
+version: 1.1.0
 type: software
 repository-code: https://github.com/Falmi/iterative-local-communication

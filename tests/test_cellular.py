@@ -129,7 +129,7 @@ def test_t3_p0_matches_baseline():
 
 @pytest.mark.parametrize('iterations', [0, 3])
 def test_cellular_analysis_messages_and_final_metrics(iterations):
-    config = load_config('configs/cellular.yaml')
+    config = load_config('configs/cifar10/cifar10-C-cellular-t3-seed1.yaml')
     config['training']['batch_size'] = 3  # test incomplete batch weighting
     model = CellularClassifier(communication_iterations=iterations, residual_scale=0.5)
     result = analyze_refinement(model, make_loader(config, 'test', True), torch.device('cpu'),
@@ -153,8 +153,8 @@ def test_cellular_analysis_messages_and_final_metrics(iterations):
 
 
 def test_config_controls_and_checkpoint_roundtrip(tmp_path):
-    config = load_config('configs/cellular.yaml')
-    baseline_config = load_config('configs/baseline.yaml')
+    config = load_config('configs/cifar10/cifar10-C-cellular-t3-seed1.yaml')
+    baseline_config = load_config('configs/cifar10/cifar10-A-baseline-seed1.yaml')
     assert all(config[k] == baseline_config[k] for k in ('seed', 'deterministic', 'data', 'training', 'device'))
     model = create_model(config['model']).eval()
     path = tmp_path / 'cellular.pt'
@@ -171,7 +171,7 @@ def test_config_controls_and_checkpoint_roundtrip(tmp_path):
     ('communication_iterations', True), ('share_communication_weights', 'yes'),
     ('neighbourhood_kernel_size', 1), ('communication_type', 'global'), ('residual_scale', float('nan'))])
 def test_invalid_cellular_configuration(tmp_path, key, value):
-    config = load_config('configs/cellular.yaml')
+    config = load_config('configs/cifar10/cifar10-C-cellular-t3-seed1.yaml')
     config['model'][key] = value
     path = tmp_path / 'invalid.yaml'
     path.write_text(yaml.safe_dump(config))

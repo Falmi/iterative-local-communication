@@ -1,0 +1,7 @@
+model,dataset,T,seed,status,epoch,batch_or_eval_batch,global_step,failure_stage,failure_quantity,notes
+C,CIFAR-10,3,4,failed,1,73,73,gradient,backbone.0.weight,"Two unchanged reproductions fail identically; finite inputs and valid labels; optimizer update not applied; first monitored gradient, not proven origin."
+C,CIFAR-10,5,1,failed,15,1,5280,validation_forward,backbone.6.1.bn2,Isolated replay of uncommitted epoch 15 from original epoch-14 checkpoint
+C,CIFAR-10,5,2,failed,1,47,47,gradient,backbone.0.weight,Recorded numerical failure; no replacement seed.
+C,CIFAR-10,5,3,failed,1,64,64,gradient,backbone.0.weight,Recorded numerical failure; no replacement seed.
+C,CIFAR-100,3,1,failed,28,188,9692,gradient,backbone.0.weight,Recorded numerical failure; no replacement seed.
+C,CIFAR-100,3,2,failed,16,81,5361,gradient,backbone.0.weight,Recorded numerical failure; no replacement seed.

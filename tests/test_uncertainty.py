@@ -103,7 +103,7 @@ def test_parameter_invariance_and_initialization():
 
 @pytest.mark.parametrize('steps', [0,3])
 def test_analysis_groups_and_gate_stats(steps):
-    config = load_config('configs/uncertainty_cellular.yaml')
+    config = load_config('configs/cifar10/cifar10-D1-linear-t3-seed1.yaml')
     config['training']['batch_size'] = 3
     model = Guided(communication_iterations=steps, gate_mode='fixed', fixed_gate_value=.5)
     result = analyze_refinement(model,make_loader(config,'test',True),torch.device('cpu'),collect_samples=True)
@@ -143,8 +143,8 @@ def test_rank_groups_ties_empty_and_known_outcomes():
 
 
 def test_checkpoint_and_config_controls(tmp_path):
-    config=load_config('configs/uncertainty_cellular.yaml')
-    c=load_config('configs/cellular.yaml')
+    config=load_config('configs/cifar10/cifar10-D1-linear-t3-seed1.yaml')
+    c=load_config('configs/cifar10/cifar10-C-cellular-t3-seed1.yaml')
     assert all(config[k]==c[k] for k in ['training','data','seed','deterministic'])
     model=create_model(config['model']).eval()
     path=tmp_path/'d.pt'
@@ -160,7 +160,7 @@ def test_checkpoint_and_config_controls(tmp_path):
 @pytest.mark.parametrize('key,value',[('gate_mode','learned'),('detach_uncertainty_gate','true'),
     ('normalize_uncertainty',False),('uncertainty_type','margin'),('fixed_gate_value',-1),('fixed_gate_value',float('nan'))])
 def test_invalid_options(tmp_path,key,value):
-    config=load_config('configs/uncertainty_cellular.yaml'); config['model'][key]=value
+    config=load_config('configs/cifar10/cifar10-D1-linear-t3-seed1.yaml'); config['model'][key]=value
     path=tmp_path/'bad.yaml'; path.write_text(yaml.safe_dump(config))
     with pytest.raises(ValueError): load_config(str(path))
     with pytest.raises(ValueError): create_model(config['model'])
